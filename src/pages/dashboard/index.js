@@ -98,7 +98,7 @@ export default function Dashboard({myid, userblg }){
             </div>
             <div className="dashboardblogs"><h1>My Blogs</h1></div>
          { userblg ?  <div className="allCardsBlog">
-                {userblg.blogs.map(blg => <Db_BlogCards key={Math.random()} heading = {blg.heading} description = {blg.description} blg={blg} handleDelete1 ={handleDelete1}></Db_BlogCards>)}
+                {userblg.blogs.map(blg => <Db_BlogCards key={Math.random()} heading = {blg.heading} description = {blg.description} blg={blg} handleDelete1 ={handleDelete1} time = {blg.getTime}></Db_BlogCards>)}
             </div> : <Card><h1>Please login Frist...</h1></Card>}
         </div>
     )
