@@ -1,10 +1,8 @@
 import { getAllAccounts ,signUp } from "@/services/user";
 
-  //   sign-up
   export default function handler(req, res) {
   if(req.method === "GET") {
     const mydata = getAllAccounts();
-  //   console.log(mydata)
     res.status(200).json(mydata);
   }
 
