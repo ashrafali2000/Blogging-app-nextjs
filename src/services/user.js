@@ -106,7 +106,7 @@ if(val){
       return userId;
   }
 else{
-  userId.push({id:userId.length+ 1, name,email,password,blogs:[],userImg:[]});
+  userId.push({id:userId.length+ 1, name,email,password,blogs:[],userImg:[]  });
     fs.writeFileSync(filePathForSignUP, JSON.stringify({ userId }));
     return userId;
   }
@@ -189,8 +189,10 @@ export function getAllAccounts1() {
 
   export function createBlog(id,{heading, description}) {
     let {userId} = getAllAccounts();
+    let time = new Date().toDateString();
+    let getTime = time.slice(3);
        let userBlogs = userId.find(item => item.id === Number(id));
-       userBlogs.blogs.push({heading, description});
+       userBlogs.blogs.push({heading, description, getTime});
        userId.push(userBlogs);
        userId = userId.filter((obj, index) =>
        userId.findIndex((item) => item.id === obj.id) === index
