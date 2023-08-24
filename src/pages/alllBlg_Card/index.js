@@ -30,10 +30,10 @@ return (
         width:700,
         boxShadow:"1px 1px 8px #777"
     }}>
-      <Avatar size={64} icon={<UserOutlined />} /> {name}   <h1 style={{
+      <Avatar size={64} icon={<UserOutlined />} /> <div style={{display:"inline"}}> <span>{name} </span> <br></br> <span style={{display:"inline-block"}}> {blogs[0].getTime} </span></div>  <h1 style={{
             fontSize: 30,
             fontWeight:500
-        }}>{blogs[0].heading}</h1><sp></sp>
+        }}>{blogs[0].heading}</h1>
         <p>{blogs[0].description}</p>
  <div className="btnCarddiv" style={{width: 120}}><Link href={`/onlyOneUsr/${mykey}`}>See from this user</Link></div>
     </Card>
