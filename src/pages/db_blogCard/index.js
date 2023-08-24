@@ -1,8 +1,8 @@
 import { Card } from "antd";
-import Avatar from "antd";
-// import { Button } from "antd/es/radio";
-// import Link from "next/link";
-export default function Db_BlogCards({time,handleDelete,blg,userblg, heading, description}) {
+import {Avatar} from "antd";
+
+
+export default function Db_BlogCards({time ,imgUser,handleDelete,blg, heading, description}) {
 
         
 return (
@@ -11,6 +11,8 @@ return (
         width:660,
         boxShadow:"1px 1px 8px #777"
     }}>
+        <Avatar src = {imgUser} style ={{width: 50,height:50}} />
+        
         <h1 style={{
             fontSize: 30,
             fontWeight:500

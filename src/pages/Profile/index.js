@@ -19,7 +19,7 @@ export default function AllBlogsfromOneUsr({log1,imgUser}) {
     return(<div>
        <div className="sign-header">Profile</div>
         <div  className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm formBorder bg-white">
-        <Avatar src = {imgUser}></Avatar>
+        <Avatar src = {imgUser} style={{width:60, height:60}}></Avatar>
         <h1>{log1}</h1>
         <form onSubmit={submitHandler}>
         <div className="mt-2">

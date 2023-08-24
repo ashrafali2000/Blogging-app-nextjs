@@ -1,10 +1,8 @@
 import { useRef, useState, useEffect } from "react"
 import Db_BlogCards from "../db_blogCard";
 import { Card } from "antd";
-export default function Dashboard({myid, userblg }){
+export default function Dashboard({myid,imgUser, userblg }){
     // const [blogs, setBlogs] = useState([]);
-
-    
     // useEffect(() => {
     //     fetch("/api/user_blog/")
     //       .then((res) => res.json())
@@ -25,18 +23,8 @@ export default function Dashboard({myid, userblg }){
         const description =descriptionRef.current.value;
 
         const newBlogs = JSON.stringify({myid,heading,description });
-        // POST method
-        // fetch("/api/user_blog/", {
-        //   method: "POST",
-        //   body: newBlogs,
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //   },
-        // })
-        // .then((res) => res.json())
-        // .then((json) => console.log(json));
-   
 
+        // POST method
         fetch("/api/user_blog/", {
           method: "POST",
           body: newBlogs,
@@ -46,11 +34,6 @@ export default function Dashboard({myid, userblg }){
         })
         .then((res) => res.json())
         .then((json) => console.log(json));
-
-
-
-
-
 
     }  
 
@@ -97,8 +80,8 @@ export default function Dashboard({myid, userblg }){
                 </form>
             </div>
             <div className="dashboardblogs"><h1>My Blogs</h1></div>
-         { userblg ?  <div className="allCardsBlog">
-                {userblg.blogs.map(blg => <Db_BlogCards key={Math.random()} heading = {blg.heading}  description = {blg.description} blg={blg} handleDelete1 ={handleDelete1} time = {blg.getTime}></Db_BlogCards>)}
+         { Object.keys(userblg).length !== 0 ?  <div className="allCardsBlog">
+              {userblg.blogs.map(blg => <Db_BlogCards key={Math.random()} imgUser ={imgUser} heading = {blg.heading}  description = {blg.description} blg={blg} handleDelete1 ={handleDelete1} time = {blg.getTime}></Db_BlogCards>)}
             </div> : <Card><h1>Please login Frist...</h1></Card>}
         </div>
     )

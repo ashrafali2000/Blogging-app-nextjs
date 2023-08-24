@@ -15,7 +15,7 @@ export default function Home() {
       </div>
       <div className="dashboardblogs"><h1>All Blogs</h1></div>
       <div className="allCardsBlog">
-      {blogs.map(blg => <Allblg_Card key={blg.id} mykey= {blg.id} blogs = {blg.blogs}  blg={blg} name = {blg.name}></Allblg_Card>)}
+      {blogs.map(blg => <Allblg_Card key={blg.id} mykey= {blg.id} blogs = {blg.blogs}  blg={blg} name = {blg.name} blogimg = {blg.imgUrl}></Allblg_Card>)}
       </div>
   </div>)
 }

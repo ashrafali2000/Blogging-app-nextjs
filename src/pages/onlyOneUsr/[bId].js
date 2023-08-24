@@ -13,7 +13,7 @@ export default function OnlyOneUsrBlgs(props){
       <ArrowLeftOutline style={{display:"inline-block "}}/>  <Link href={"/"}>Back to the Users Blog</Link>
       </div>
 
-       <div style={{ backgroundColor:"#fff", boxShadow:"1px 1px 8px #777",padding:"10px ",textAlign:"center",display:'flex',justifyContent:'center', alignItems:"center", flexWrap:"wrap"}}> <Avatar size={64} icon={<UserOutlined />} /><h1 style={{fontSize:25, fontWeight:600}}>{myData.name}       Blogs</h1></div>
+       <div style={{ backgroundColor:"#fff", boxShadow:"1px 1px 8px #777",padding:"10px ",textAlign:"center",display:'flex',justifyContent:'center', alignItems:"center", flexWrap:"wrap"}}> <Avatar src={myData.imgUrl} style={{width:60,height:60}} /><h1 style={{fontSize:25, fontWeight:600}}>{myData.name}       Blogs</h1></div>
 
         <div  style={{display:"flex", justifyContent:"center", alignItems:"center",flexWrap:"wrap", gap:20,paddingTop:20}}>
         <Card key= {Math.random()} style={{width:700,wordWrap:"break-word",boxShadow:"1px 1px 8px #777"}}>
@@ -32,7 +32,7 @@ export default function OnlyOneUsrBlgs(props){
       <ArrowLeftOutline style={{display:"inline-block "}}/>  <Link href={"/"}>Back to the Users Blog</Link>
       </div>
 
-       <div style={{ backgroundColor:"#fff", boxShadow:"1px 1px 8px #777",padding:"10px ",textAlign:"center",display:'flex',justifyContent:'center', alignItems:"center", flexWrap:"wrap"}}><Avatar size={64} icon={<UserOutlined />} />   <h1 style={{fontSize:25, fontWeight:600}}>{myData.name}       Blogs</h1></div>
+       <div style={{ backgroundColor:"#fff", boxShadow:"1px 1px 8px #777",padding:"10px ",textAlign:"center",display:'flex',justifyContent:'center', alignItems:"center", flexWrap:"wrap"}}><Avatar src={myData.imgUrl} style={{width:60,height:60}} />   <h1 style={{fontSize:25, fontWeight:600}}>{myData.name}       Blogs</h1></div>
 
        <div style={{display:"flex", justifyContent:"center", alignItems:"center",flexWrap:"wrap", gap:20,paddingTop:20}}>
 

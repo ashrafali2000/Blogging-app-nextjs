@@ -27,21 +27,21 @@ export default function SingIn({setLog1, setDashbod,setLog3,setById, setUserBlg,
             userName = name;
             id = users[a].id;
             user = users[a];
-              usrImg = users[a].imgUrl;
-            setUserBlg(user)
-            val = true;
-            break;
+              usrImg =  users[a].imgUrl;
+              val = true;
+              setImgUser(usrImg);
+              break;
+            }
           }
-        }
-        if(val){
-          setImgUser(usrImg);
+          if(val){
+          setUserBlg(user)
           setCheck(true);
           setLog1(userName)
           setDashbod(true)
           setLog3(false)
           setById(id)
           console.log(user)
-     router.replace("/dashboard");
+            router.replace("/dashboard");    
 
       }
     else{
