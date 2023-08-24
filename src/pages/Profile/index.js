@@ -2,7 +2,7 @@ import { UserOutlined } from '@ant-design/icons';
 import React, { useRef } from 'react';
 import { Avatar } from 'antd';
 
-export default function AllBlogsfromOneUsr({log2}) {
+export default function AllBlogsfromOneUsr({log1,imgUser}) {
     const oldpasswordRef = useRef()
     const newpasswordRef = useRef()
     const updatepasswordRef = useRef()
@@ -19,8 +19,8 @@ export default function AllBlogsfromOneUsr({log2}) {
     return(<div>
        <div className="sign-header">Profile</div>
         <div  className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm formBorder bg-white">
-        <Avatar></Avatar>
-        <h1>{log2}</h1>
+        <Avatar src = {imgUser}></Avatar>
+        <h1>{log1}</h1>
         <form onSubmit={submitHandler}>
         <div className="mt-2">
                   <input

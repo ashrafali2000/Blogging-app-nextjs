@@ -7,9 +7,9 @@ import { getAllAccounts ,signUp } from "@/services/user";
   }
 
      if (req.method === "POST") {
-        const {name, email,password, repeatPassword} = req.body;
+        const {name, email,password, imgUrl} = req.body;
         console.log(req.body);
-        const updatedProducts = signUp(name, email,password ,repeatPassword);
+        const updatedProducts = signUp(name, email,password , imgUrl);
         return res.status(201).json(updatedProducts);
       }
 }

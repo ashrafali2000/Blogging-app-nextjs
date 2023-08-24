@@ -91,7 +91,7 @@ export function getAllAccounts() {
   return JSON.parse(data);
 }
 // signUp accont
-export function signUp(name,email,password) {
+export function signUp(name,email,password,imgUrl) {
  const {userId} = getAllAccounts();
   let val = false;
   for(let a = 0; a < userId.length; a++) {
@@ -106,7 +106,7 @@ if(val){
       return userId;
   }
 else{
-  userId.push({id:userId.length+ 1, name,email,password,blogs:[],userImg:[]  });
+  userId.push({id:userId.length+ 1, name,email,password,imgUrl,blogs:[] });
     fs.writeFileSync(filePathForSignUP, JSON.stringify({ userId }));
     return userId;
   }

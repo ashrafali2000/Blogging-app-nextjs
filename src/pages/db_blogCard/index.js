@@ -1,7 +1,8 @@
 import { Card } from "antd";
+import Avatar from "antd";
 // import { Button } from "antd/es/radio";
 // import Link from "next/link";
-export default function Db_BlogCards({blogs, time,handleDelete,blg,userblg, heading, description}) {
+export default function Db_BlogCards({time,handleDelete,blg,userblg, heading, description}) {
 
         
 return (
