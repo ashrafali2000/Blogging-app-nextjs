@@ -3,10 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/signIn": "pages/signIn.js",
   "/api/user_blog": "pages/api/user_blog.js",
-  "/signUp": "pages/signUp.js",
-  "/onlyOneUsr/[bId]": "pages/onlyOneUsr/[bId].js",
-  "/api/onlyOneUsr/[allblguser]": "pages/api/onlyOneUsr/[allblguser].js",
-  "/api/onlyOneUsr": "pages/api/onlyOneUsr.js"
+  "/dashboard": "pages/dashboard.js"
 }

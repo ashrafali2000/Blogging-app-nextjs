@@ -33,7 +33,7 @@ return (
       <Avatar size={64} icon={<UserOutlined />} /> {name}   <h1 style={{
             fontSize: 30,
             fontWeight:500
-        }}>{blogs[0].heading}</h1>
+        }}>{blogs[0].heading}</h1><sp></sp>
         <p>{blogs[0].description}</p>
  <div className="btnCarddiv" style={{width: 120}}><Link href={`/onlyOneUsr/${mykey}`}>See from this user</Link></div>
     </Card>

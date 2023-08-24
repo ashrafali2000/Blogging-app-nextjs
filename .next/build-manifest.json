@@ -27,20 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/onlyOneUsr/[bId]": [
+    "/dashboard": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/onlyOneUsr/[bId].js"
-    ],
-    "/signIn": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/signIn.js"
-    ],
-    "/signUp": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/signUp.js"
+      "static/chunks/pages/dashboard.js"
     ]
   },
   "ampFirstPages": []
