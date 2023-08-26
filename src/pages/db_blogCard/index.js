@@ -18,7 +18,7 @@ return (
             fontWeight:500
         }}>{heading}</h1><span>{time}</span>
         <p>{description}</p>
- <div className="btnCarddiv"> <button className="btnCard" onClick={() => handleDelete1(idkey)}>Delete</button><button className="btnCard">Edit</button></div>
+ <div className="btnCarddiv"> <button className="btnCard" onClick={() => handleDelete1(idkey)()}>Delete</button><button className="btnCard">Edit</button></div>
     </Card>
  
     </div>

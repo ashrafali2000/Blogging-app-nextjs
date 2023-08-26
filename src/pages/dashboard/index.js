@@ -12,6 +12,10 @@ export default function Dashboard({myid,imgUser, userblg }){
      const handleDelete1 = (id) => {
         const updatedData = blogs.filter((item) => item.id !== id)
         setBlogs(updatedData)
+        return function oneBlogsDellete(bid) {
+           const blg =  blogs.filter((i) => i.id !== bid);
+           setBlogs(blg);
+        }
       }
 
     const headingRef = useRef()
@@ -80,11 +84,11 @@ export default function Dashboard({myid,imgUser, userblg }){
                 </form>
             </div>
             <div className="dashboardblogs"><h1>My Blogs</h1></div>
-         {/* { Object.keys(userblg).length !== 0 ?  <div className="allCardsBlog">
+         { Object.keys(userblg).length !== 0 ?  <div className="allCardsBlog">
               {userblg.blogs.map(blg => <Db_BlogCards key={Math.random()} imgUser ={imgUser} heading = {blg.heading}  description = {blg.description} blg={blg} handleDelete1 ={handleDelete1} time = {blg.getTime}></Db_BlogCards>)}
-            </div> : <Card><h1>Please login Frist...</h1></Card>} */}
+            </div> : <Card><h1>Please login Frist...</h1></Card>}
 
-{blogs.map(users => users.blogs.map(usr => <Db_BlogCards key={Math.random()} heading = {usr.heading} idkey = {usr.id} description={usr.description} handleDelete1 ={handleDelete1}></Db_BlogCards>))}
+{/* {blogs.map(users => users.blogs.map(usr => <Db_BlogCards key={Math.random()} heading = {usr.heading} idkey = {usr.id} description={usr.description} handleDelete1 ={handleDelete1}></Db_BlogCards>))} */}
             
         </div>
     )
