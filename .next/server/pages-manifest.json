@@ -2,8 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/dashboard": "pages/dashboard.js",
-  "/": "pages/index.js",
+  "/onlyOneUsr/[bId]": "pages/onlyOneUsr/[bId].js",
   "/signIn": "pages/signIn.js",
-  "/api/user_blog": "pages/api/user_blog.js"
+  "/api/user_blog": "pages/api/user_blog.js",
+  "/dashboard": "pages/dashboard.js"
 }
