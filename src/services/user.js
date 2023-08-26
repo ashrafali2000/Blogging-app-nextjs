@@ -192,7 +192,7 @@ export function getAllAccounts1() {
     let time = new Date().toDateString();
     let getTime = time.slice(3);
        let userBlogs = userId.find(item => item.id === Number(id));
-       userBlogs.blogs.push({heading, description, getTime});
+       userBlogs.blogs.push({id:userBlogs.blogs.length + 1, heading, description, getTime});
        userId.push(userBlogs);
        userId = userId.filter((obj, index) =>
        userId.findIndex((item) => item.id === obj.id) === index

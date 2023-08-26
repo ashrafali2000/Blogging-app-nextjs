@@ -2,12 +2,12 @@ import { useRef, useState, useEffect } from "react"
 import Db_BlogCards from "../db_blogCard";
 import { Card } from "antd";
 export default function Dashboard({myid,imgUser, userblg }){
-    // const [blogs, setBlogs] = useState([]);
-    // useEffect(() => {
-    //     fetch("/api/user_blog/")
-    //       .then((res) => res.json())
-    //       .then((p) => setBlogs(p.userId));
-    //   }, []);
+    const [blogs, setBlogs] = useState([]);
+    useEffect(() => {
+        fetch("/api/user_blog/")
+          .then((res) => res.json())
+          .then((p) => setBlogs(p.userId));
+      }, []);
 
      const handleDelete1 = (id) => {
         const updatedData = blogs.filter((item) => item.id !== id)
