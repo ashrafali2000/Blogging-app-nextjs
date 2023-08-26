@@ -4,6 +4,5 @@
   "/_document": "pages/_document.js",
   "/onlyOneUsr/[bId]": "pages/onlyOneUsr/[bId].js",
   "/signIn": "pages/signIn.js",
-  "/signUp": "pages/signUp.js",
-  "/": "pages/index.js"
+  "/signUp": "pages/signUp.js"
 }
