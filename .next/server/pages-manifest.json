@@ -3,10 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/onlyOneUsr/[bId]": "pages/onlyOneUsr/[bId].js",
-  "/": "pages/index.js",
-  "/api/user_blog": "pages/api/user_blog.js",
-  "/api/onlyOneUsr/[allblguser]": "pages/api/onlyOneUsr/[allblguser].js",
-  "/api/onlyOneUsr": "pages/api/onlyOneUsr.js",
   "/signIn": "pages/signIn.js",
-  "/signUp": "pages/signUp.js"
+  "/signUp": "pages/signUp.js",
+  "/": "pages/index.js"
 }
