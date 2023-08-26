@@ -1,0 +1,8 @@
+@media screen and (max-width:576px) {
+    .myCard{
+   width: 350px !important;
+    }
+    .myHeading{
+        font-size: 18px !important;
+    }
+}
