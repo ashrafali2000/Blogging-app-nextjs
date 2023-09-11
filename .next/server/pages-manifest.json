@@ -2,9 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
+  "/signIn": "pages/signIn.js",
+  "/dashboard": "pages/dashboard.js",
   "/onlyOneUsr/[bId]": "pages/onlyOneUsr/[bId].js",
-  "/api/user_blog": "pages/api/user_blog.js",
-  "/api/onlyOneUsr/[allblguser]": "pages/api/onlyOneUsr/[allblguser].js",
-  "/api/onlyOneUsr": "pages/api/onlyOneUsr.js"
+  "/api/user_blog": "pages/api/user_blog.js"
 }

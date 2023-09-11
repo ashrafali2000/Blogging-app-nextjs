@@ -212,3 +212,6 @@ export function getAllAccounts1() {
 }
 
 // deleteBlog
+export function getOneBlgDel(id){
+  
+}
