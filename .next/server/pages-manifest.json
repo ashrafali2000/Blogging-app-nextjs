@@ -2,9 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/onlyOneUsr/[bId]": "pages/onlyOneUsr/[bId].js",
-  "/dashboard": "pages/dashboard.js",
   "/signIn": "pages/signIn.js",
+  "/": "pages/index.js",
+  "/dashboard": "pages/dashboard.js",
+  "/api/onlyOneUsr/[allblguser]": "pages/api/onlyOneUsr/[allblguser].js",
   "/api/user_blog": "pages/api/user_blog.js",
-  "/api/signin": "pages/api/signin.js"
+  "/api/onlyOneUsr": "pages/api/onlyOneUsr.js",
+  "/onlyOneUsr/[bId]": "pages/onlyOneUsr/[bId].js"
 }
