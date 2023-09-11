@@ -50,7 +50,7 @@ export default function OnlyOneUsrBlgs(props){
 
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:3001/api/onlyOneUsr/");
+  const res = await fetch("http://localhost:3000/api/onlyOneUsr/");
   const data = await res.json();
   const myProduct = data.userId.map(p => {
     return { params: { bId: p.id.toString() } }
@@ -65,7 +65,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
   console.log(params);
-  const res = await fetch(`http://localhost:3001/api/onlyOneUsr/${params.bId}`);
+  const res = await fetch(`http://localhost:3000/api/onlyOneUsr/${params.bId}`);
   const data = await res.json();
   // console.log(data)
 
