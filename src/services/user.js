@@ -210,3 +210,5 @@ export function getAllAccounts1() {
  fs.writeFileSync(filePathForOneUserblogs, JSON.stringify({userBLogs: userBLogs}));
   return userBLogs;
 }
+
+// deleteBlog
