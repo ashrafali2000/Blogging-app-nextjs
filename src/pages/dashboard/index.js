@@ -108,7 +108,7 @@ export default function Dashboard({myid,imgUser, userblg }){
             </div>
             <div className="dashboardblogs"><h1>My Blogs</h1></div>
          { Object.keys(userBlogs).length !== 0 ?  <div className="allCardsBlog">
-              {userBlogs.blogs.map(blg => <Db_BlogCards key={Math.random()} imgUser ={imgUser} heading = {blg.heading}  description = {blg.description} blg={blg} oneBlogsDelete ={oneBlogsDelete} deleteHandler = {deleteHandler} time = {blg.getTime} blogId = {blg.id}></Db_BlogCards>)}
+              {userBlogs.map(blg => <Db_BlogCards key={Math.random()} imgUser ={imgUser} heading = {blg.heading}  description = {blg.description} blg={blg} oneBlogsDelete ={oneBlogsDelete} deleteHandler = {deleteHandler} time = {blg.getTime} blogId = {blg.id}></Db_BlogCards>)}
             </div> : <Card><h1>Please login Frist...</h1></Card>}
 
 {/* {blogs.map(users => users.blogs.map(usr => <Db_BlogCards key={Math.random()} heading = {usr.heading} idkey = {usr.id} description={usr.description} handleDelete1 ={handleDelete1}></Db_BlogCards>))} */}

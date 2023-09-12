@@ -26,7 +26,7 @@ export default function SingIn({setLog1, setDashbod,setLog3,setById, setUserBlg,
         if( users[a].name === name && users[a].password === password){
             userName = name;
             id = users[a].id;
-            user = users[a];
+            user = users[a].blogs;
               usrImg =  users[a].imgUrl;
               val = true;
               setImgUser(usrImg);
