@@ -2,7 +2,7 @@ import { Card } from "antd";
 import {Avatar} from "antd";
 
 
-export default function Db_BlogCards({time,blogId,myid ,imgUser,oneBlogsDelete,blg, heading, description}) {
+export default function Db_BlogCards({time,deleteHandler,blogId,myid ,imgUser,oneBlogsDelete,blg, heading, description}) {
 
         
 return (
@@ -18,7 +18,7 @@ return (
             fontWeight:500
         }}>{heading}</h1><span>{time}</span>
         <p>{description}</p>
- <div className="btnCarddiv"> <button className="btnCard" onClick={() => oneBlogsDelete(blg.id)}>Delete</button><button className="btnCard">Edit</button></div>
+ <div className="btnCarddiv"> <button className="btnCard" onClick={() => {oneBlogsDelete(blg.id) ; deleteHandler(blg.id);}}>Delete</button><button className="btnCard">Edit</button></div>
     </Card>
  
     </div>
