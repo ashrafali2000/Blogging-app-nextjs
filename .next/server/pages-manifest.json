@@ -2,10 +2,15 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/signIn": "pages/signIn.js",
-  "/api/user_blog": "pages/api/user_blog.js",
   "/api/signin": "pages/api/signin.js",
+  "/dashboard": "pages/dashboard.js",
   "/": "pages/index.js",
+  "/api/user_blog": "pages/api/user_blog.js",
+  "/Profile": "pages/Profile.js",
+  "/onlyOneUsr/[bId]": "pages/onlyOneUsr/[bId].js",
+  "/api/onlyOneUsr": "pages/api/onlyOneUsr.js",
+  "/api/onlyOneUsr/[allblguser]": "pages/api/onlyOneUsr/[allblguser].js",
   "/api/updatePassword": "pages/api/updatePassword.js",
-  "/Profile": "pages/Profile.js"
+  "/api/del_blog": "pages/api/del_blog.js",
+  "/signIn": "pages/signIn.js"
 }

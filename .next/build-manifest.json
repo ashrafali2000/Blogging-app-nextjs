@@ -37,6 +37,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/dashboard.js"
     ],
+    "/onlyOneUsr/[bId]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/onlyOneUsr/[bId].js"
+    ],
     "/signIn": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
