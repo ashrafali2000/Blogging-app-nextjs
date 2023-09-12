@@ -2,12 +2,13 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/signIn": "pages/signIn.js",
   "/api/user_blog": "pages/api/user_blog.js",
-  "/onlyOneUsr/[bId]": "pages/onlyOneUsr/[bId].js",
-  "/api/onlyOneUsr/[allblguser]": "pages/api/onlyOneUsr/[allblguser].js",
-  "/api/signin": "pages/api/signin.js",
-  "/api/onlyOneUsr": "pages/api/onlyOneUsr.js",
   "/": "pages/index.js",
-  "/dashboard": "pages/dashboard.js"
+  "/onlyOneUsr/[bId]": "pages/onlyOneUsr/[bId].js",
+  "/api/onlyOneUsr": "pages/api/onlyOneUsr.js",
+  "/api/onlyOneUsr/[allblguser]": "pages/api/onlyOneUsr/[allblguser].js",
+  "/signIn": "pages/signIn.js",
+  "/api/signin": "pages/api/signin.js",
+  "/dashboard": "pages/dashboard.js",
+  "/api/del_blog": "pages/api/del_blog.js"
 }
