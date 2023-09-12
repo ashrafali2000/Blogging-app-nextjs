@@ -231,26 +231,24 @@ return userId;
  }
 
 //  update password
+
 export const getALlUsers = () => {
     const users = fs.readFileSync(filePathForSignUP);
     return JSON.parse(users);
 }
-
 // check getByEmail function
 export const getByEmail = (email) => {
     const {userId} = getALlUsers();
     return userId.find(user => user.email === email)
 }
-
 // Updata password Functions
-export async function verifyUserPassword( oldPassword,myUserPassword,userEmail,updatepassword) {
+export async function verifyUserPassword( oldPassword,myUserPassword,userEmail,updatepassword,newPassword) {
 
-    if(oldPassword !== myUserPassword) {
+    if(oldPassword !== myUserPassword || newPassword !== updatepassword ) {
       throw new Error ("Your Old Password is incorrect");
     }
     return updateUserPassword(userEmail,updatepassword); 
 }
-
 export async function updateUserPassword(userEmail, updatepassword) {
   let { userId } = getALlUsers();
   const found = getByEmail(userEmail);

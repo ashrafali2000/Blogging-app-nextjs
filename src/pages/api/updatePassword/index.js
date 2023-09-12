@@ -2,11 +2,11 @@ import { verifyUserPassword, updateUserPassword, getByEmail } from "@/services/u
 
 export default async function handler(req, res) {
   if (req.method === "PATCH") {
-    const { oldPassword, updatepassword, userEmail } = req.body;
+    const { oldPassword, updatepassword,newPassword, userEmail } = req.body;
         try{
           const myUser = getByEmail(userEmail);
           const myUserPassword = myUser.password;
-          const userVerifyPassword = await verifyUserPassword(oldPassword, myUserPassword, userEmail,updatepassword);
+          const userVerifyPassword = await verifyUserPassword(oldPassword, myUserPassword, userEmail,updatepassword,newPassword);
           res.status(200).json(userVerifyPassword);
         }catch(err){
           res.status(400).json({message:err.message});

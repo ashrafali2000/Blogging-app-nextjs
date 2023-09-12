@@ -16,13 +16,13 @@ export default function AllBlogsfromOneUsr({log1,email,imgUser}) {
        
         const res = await fetch("/api/updatePassword", {
           method: "PATCH",
-          body: JSON.stringify({ oldPassword, updatepassword, userEmail }),
+          body: JSON.stringify({ oldPassword, updatepassword,newPassword, userEmail }),
           headers: {
               "Content-Type": "application/json",
           },
       });
       if (!res.ok) {
-        alert("Your Old Password does not matched");
+        alert("Your Old Password does not matched and also check Your Update password field and new Password field does not matched");
         return;
     }
     alert("Password Update successful");
