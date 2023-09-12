@@ -2,18 +2,16 @@ import { useRef, useState, useEffect } from "react"
 import Db_BlogCards from "../db_blogCard";
 import { Card } from "antd";
 export default function Dashboard({myid,imgUser, userblg }){
-    const [blogs, setBlogs] = useState([]);
+    const [userBlogs, setUserBlogs] = useState([]);
+    
     useEffect(() => {
-        fetch("/api/user_blog/")
-          .then((res) => res.json())
-          .then((p) => setBlogs(p.userId));
+       setUserBlogs(userblg);
       }, []);
 
-    
-        // const  oneBlogsDellete1 = (userId, blogId) => {
-        //    const blg =  blogs.filter((blg) => blg.id !== blgId);
-        //    setBlogs(blg);
-        // }
+        const  deleteHandler = (blogId) => {
+           const blg =  userBlogs.filter((blg) => blg.id !== blogId);
+           setUserBlogs(blg);
+        }
       
 
         const oneBlogsDelete = (blogId) => {
@@ -109,8 +107,8 @@ export default function Dashboard({myid,imgUser, userblg }){
                 </form>
             </div>
             <div className="dashboardblogs"><h1>My Blogs</h1></div>
-         { Object.keys(userblg).length !== 0 ?  <div className="allCardsBlog">
-              {userblg.blogs.map(blg => <Db_BlogCards key={Math.random()} imgUser ={imgUser} heading = {blg.heading}  description = {blg.description} blg={blg} oneBlogsDelete ={oneBlogsDelete} time = {blg.getTime} blogId = {blg.id}></Db_BlogCards>)}
+         { Object.keys(userBlogs).length !== 0 ?  <div className="allCardsBlog">
+              {userBlogs.blogs.map(blg => <Db_BlogCards key={Math.random()} imgUser ={imgUser} heading = {blg.heading}  description = {blg.description} blg={blg} oneBlogsDelete ={oneBlogsDelete} deleteHandler = {deleteHandler} time = {blg.getTime} blogId = {blg.id}></Db_BlogCards>)}
             </div> : <Card><h1>Please login Frist...</h1></Card>}
 
 {/* {blogs.map(users => users.blogs.map(usr => <Db_BlogCards key={Math.random()} heading = {usr.heading} idkey = {usr.id} description={usr.description} handleDelete1 ={handleDelete1}></Db_BlogCards>))} */}
