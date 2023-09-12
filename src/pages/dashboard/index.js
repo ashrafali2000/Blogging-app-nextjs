@@ -10,11 +10,39 @@ export default function Dashboard({myid,imgUser, userblg }){
       }, []);
 
     
-        const  oneBlogsDellete = (blgId) => {
-           const blg =  blogs.filter((blg) => blg.id !== blgId);
-           setBlogs(blg);
-        }
+        // const  oneBlogsDellete1 = (userId, blogId) => {
+        //    const blg =  blogs.filter((blg) => blg.id !== blgId);
+        //    setBlogs(blg);
+        // }
       
+
+        const oneBlogsDelete = (blogId) => {
+          const updateBlg = JSON.stringify({myid,blogId });
+          // PATCH method
+          fetch("/api/del_blog/", {
+            method: "PATCH",
+            body: updateBlg,
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+          .then((res) => res.json())
+          .then((json) => console.log(json));
+      }  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     const headingRef = useRef()
     const descriptionRef = useRef()
@@ -36,7 +64,6 @@ export default function Dashboard({myid,imgUser, userblg }){
         })
         .then((res) => res.json())
         .then((json) => console.log(json));
-
     }  
 
     return(
@@ -83,7 +110,7 @@ export default function Dashboard({myid,imgUser, userblg }){
             </div>
             <div className="dashboardblogs"><h1>My Blogs</h1></div>
          { Object.keys(userblg).length !== 0 ?  <div className="allCardsBlog">
-              {userblg.blogs.map(blg => <Db_BlogCards key={Math.random()} imgUser ={imgUser} heading = {blg.heading}  description = {blg.description} blg={blg} oneBlogsDellete ={oneBlogsDellete} time = {blg.getTime} blgId = {blg.id}></Db_BlogCards>)}
+              {userblg.blogs.map(blg => <Db_BlogCards key={Math.random()} imgUser ={imgUser} heading = {blg.heading}  description = {blg.description} blg={blg} oneBlogsDelete ={oneBlogsDelete} time = {blg.getTime} blogId = {blg.id}></Db_BlogCards>)}
             </div> : <Card><h1>Please login Frist...</h1></Card>}
 
 {/* {blogs.map(users => users.blogs.map(usr => <Db_BlogCards key={Math.random()} heading = {usr.heading} idkey = {usr.id} description={usr.description} handleDelete1 ={handleDelete1}></Db_BlogCards>))} */}

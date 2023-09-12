@@ -212,6 +212,20 @@ export function getAllAccounts1() {
 }
 
 // deleteBlog
-export function getOneBlgDel(id){
-  
+export function getBlogById(id) {
+  const {userId} = getAllAccounts();
+ return userId.find((usr) => usr.id === Number(id));
 }
+export function deleteBLog(userid, blogId) {
+  let {userId} = getAllAccounts();
+ const user =  getBlogById(userid);
+ const myUser = user.blogs.filter(blg => blg.id !== Number(blogId));
+  let userBlogs = userId.find(item => item.id === Number(userid));
+  userBlogs.blogs = myUser;
+  userId.push(userBlogs);
+  userId = userId.filter((obj, index) =>
+  userId.findIndex((item) => item.id === obj.id) === index
+);
+fs.writeFileSync(filePathForSignUP, JSON.stringify({userId}));
+return userId;
+ }
