@@ -229,3 +229,40 @@ export function deleteBLog(userid, blogId) {
 fs.writeFileSync(filePathForSignUP, JSON.stringify({userId}));
 return userId;
  }
+
+//  update password
+export const getALlUsers = () => {
+    const users = fs.readFileSync(filePathForSignUP);
+    return JSON.parse(users);
+}
+
+// check getByEmail function
+export const getByEmail = (email) => {
+    const {userId} = getALlUsers();
+    return userId.find(user => user.email === email)
+}
+
+// Updata password Functions
+export async function verifyUserPassword( oldPassword,myUserPassword,userEmail,updatepassword) {
+
+    if(oldPassword !== myUserPassword) {
+      throw new Error ("Your Old Password is incorrect");
+    }
+    return updateUserPassword(userEmail,updatepassword); 
+}
+
+export async function updateUserPassword(userEmail, updatepassword) {
+  let { userId } = getALlUsers();
+  const found = getByEmail(userEmail);
+  let val = false;
+  for (let a = 0; a < userId.length; a++) {
+    if (userId[a].email === found.email) {
+        userId[a].password = updatepassword;
+      val = true;
+      break;
+    }
+  }
+  if (val) {
+    fs.writeFileSync(filePathForSignUP, JSON.stringify({ userId }));
+ }
+}

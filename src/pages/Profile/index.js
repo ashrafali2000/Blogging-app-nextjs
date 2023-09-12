@@ -2,17 +2,30 @@ import { UserOutlined } from '@ant-design/icons';
 import React, { useRef } from 'react';
 import { Avatar } from 'antd';
 
-export default function AllBlogsfromOneUsr({log1,imgUser}) {
+export default function AllBlogsfromOneUsr({log1,email,imgUser}) {
     const oldpasswordRef = useRef()
     const newpasswordRef = useRef()
     const updatepasswordRef = useRef()
 
-    const submitHandler = (event) => {
+    const submitHandler = async (event) => {
         event.preventDefault();
-        const oldpassword = oldpasswordRef.current.value;
-        const newpassword = newpasswordRef.current.value;
+        const userEmail = email;
+        const oldPassword = oldpasswordRef.current.value;
+        const newPassword = newpasswordRef.current.value;
         const updatepassword = updatepasswordRef.current.value;
-
+       
+        const res = await fetch("/api/updatePassword", {
+          method: "PATCH",
+          body: JSON.stringify({ oldPassword, updatepassword, userEmail }),
+          headers: {
+              "Content-Type": "application/json",
+          },
+      });
+      if (!res.ok) {
+        alert("Your Old Password does not matched");
+        return;
+    }
+    alert("Password Update successful");
 
     }
 

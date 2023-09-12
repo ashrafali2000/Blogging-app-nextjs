@@ -9,6 +9,7 @@ export default function App({ Component, pageProps }) {
   const [myid, setById] = useState('');
   const [userblg, setUserBlg] = useState({});
   const [imgUser, setImgUser] = useState("");
+  const [email, setEmail] = useState("");
 
 const signOutHandler = () => {
   setDashbod(false)
@@ -28,7 +29,7 @@ const signOutHandler = () => {
 
     </div>
 
-    <Component {...pageProps  } setLog1 ={setLog1}  setDashbod = {setDashbod} setLog3 = {setLog3} myid={myid} setById ={setById} userblg ={userblg} setUserBlg = {setUserBlg} log1 ={log1} imgUser = {imgUser} setImgUser = {setImgUser}/>
+    <Component {...pageProps  } setLog1 ={setLog1}  setDashbod = {setDashbod} setLog3 = {setLog3} myid={myid} setById ={setById} userblg ={userblg} setUserBlg = {setUserBlg} log1 ={log1} imgUser = {imgUser} setImgUser = {setImgUser} email = {email} setEmail = {setEmail}/>
     </div>
   )
 }

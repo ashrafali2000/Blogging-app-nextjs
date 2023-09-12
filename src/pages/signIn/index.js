@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 
-export default function SingIn({setLog1, setDashbod,setLog3,setById, setUserBlg,setImgUser}) {
+export default function SingIn({setLog1, setEmail, setDashbod,setLog3,setById, setUserBlg,setImgUser}) {
   const router = useRouter()
     const [check, setCheck] = useState(false);
    let userName = "";
@@ -22,11 +22,13 @@ export default function SingIn({setLog1, setDashbod,setLog3,setById, setUserBlg,
      const users =   json.userId;
       let val = false;
       let usrImg;
+      let email;
       for(let a = 0; a < users.length; a++) {
         if( users[a].name === name && users[a].password === password){
             userName = name;
             id = users[a].id;
             user = users[a].blogs;
+            email = users[a].email;
               usrImg =  users[a].imgUrl;
               val = true;
               setImgUser(usrImg);
@@ -34,13 +36,14 @@ export default function SingIn({setLog1, setDashbod,setLog3,setById, setUserBlg,
             }
           }
           if(val){
-          setUserBlg(user)
+          setUserBlg(user);
           setCheck(true);
-          setLog1(userName)
-          setDashbod(true)
-          setLog3(false)
-          setById(id)
-          console.log(user)
+          setLog1(userName);
+          setEmail(email);
+          setDashbod(true);
+          setLog3(false);
+          setById(id);
+          console.log(user);
             router.replace("/dashboard");    
 
       }
